@@ -1,0 +1,176 @@
+:root {
+  --odin-gold: rgb(206, 151, 62);
+  --odin-brass: rgb(204, 149, 67);
+  --odin-grey: rgba(74, 74, 74, 0.7);
+}
+
+.row {
+  border: 1px solid greenyellow;
+}
+
+.row > * {
+  border: 1px dotted red;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #212529;
+}
+
+h1 {
+  font-size: 2.25rem;
+  color: var(--odin-gold);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+h4 {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+}
+
+p {
+  color: var(--odin-grey);
+  font-size: 1.125rem;
+  line-height: 1.88;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.centered {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 0.2em;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0.05em 0.25em 0px;
+}
+
+.btn.blue {
+  background: #6abfc3;
+}
+
+.gradient {
+  background-image: linear-gradient(white, #eeeeee);
+}
+
+/* header */
+header {
+  padding-bottom: 3.75rem;
+}
+
+.nav {
+  position: fixed;
+  margin-bottom: 50px;
+  height: 100px;
+  background: white;
+}
+
+.logo {
+  font-family: norse;
+  font-size: 1.2em;
+  align-items: center;
+  white-space: nowrap;
+}
+.logo img {
+  height: 60px;
+}
+
+.nav-space {
+  height: 100px;
+}
+
+.hero {
+  text-align: center;
+}
+.hero .main-heading {
+  padding-bottom: 1.875rem;
+}
+.hero .sub-heading {
+  padding-bottom: 4.375rem;
+}
+
+/* curriculum details */
+.how-it-works {
+  padding-top: 60px;
+}
+.how-it-works h2 {
+  margin-bottom: 36px;
+}
+
+.how-tiles .how-tile {
+  padding: 1em;
+}
+.how-tiles img {
+  height: 80px;
+}
+.how-tiles h4 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.how-tiles .how-tiles {
+  margin-bottom: 70px;
+}
+
+.curriculum-details {
+  padding: 60px 0;
+  background-color: whitesmoke;
+}
+.curriculum-details .get-started {
+  margin-top: 40px;
+}
+.curriculum-details .get-started .btn {
+  background-color: var(--odin-brass);
+}
+
+.curriculum-details-tile {
+  width: 270px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+.curriculum-details-tile img {
+  width: 80px;
+}
+
+/* success stories */
+.success-stories h2 {
+  padding-top: 50px;
+}
+.success-stories .read-more {
+  padding-top: 30px;
+}
+.success-stories .signup {
+  padding: 5em 2.5em;
+}
+.success-stories .signup p {
+  margin-bottom: 1rem;
+}
+
+.success-story {
+  display: flex;
+  text-align: left;
+}
+.success-story img {
+  width: 50px;
+}
+.success-story .name {
+  color: var(--odin-gold);
+}
+
+/*# sourceMappingURL=styles.css.map */
