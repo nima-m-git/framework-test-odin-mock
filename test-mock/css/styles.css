@@ -4,14 +4,15 @@
   --odin-grey: rgba(74, 74, 74, 0.7);
 }
 
-.row {
-  border: 1px solid greenyellow;
+@font-face {
+  font-family: "Norse";
+  src: url("../font/norse/Norse.otf");
 }
-
-.row > * {
-  border: 1px dotted red;
+@font-face {
+  font-family: "Norse";
+  src: url("../font/norse/Norsebold.otf");
+  font-weight: bold;
 }
-
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,6 +23,8 @@ h1 {
   font-size: 2.25rem;
   color: var(--odin-gold);
   font-weight: 300;
+  margin: auto;
+  max-width: 80%;
 }
 
 h2 {
@@ -66,23 +69,44 @@ p {
   background-image: linear-gradient(white, #eeeeee);
 }
 
+.container {
+  margin: auto;
+  width: 100%;
+}
+
 /* header */
 header {
   padding-bottom: 3.75rem;
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
   position: fixed;
   margin-bottom: 50px;
   height: 100px;
   background: white;
+  justify-content: space-between;
+}
+
+.nav-item {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--odin-grey);
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  white-space: nowrap;
+  padding: 0 0.5rem;
 }
 
 .logo {
-  font-family: norse;
-  font-size: 1.2em;
+  font-family: "Norse";
+  font-weight: bold;
+  font-size: 1.6em;
   align-items: center;
   white-space: nowrap;
+  color: var(--odin-brass);
 }
 .logo img {
   height: 60px;
@@ -108,6 +132,9 @@ header {
 }
 .how-it-works h2 {
   margin-bottom: 36px;
+}
+.how-it-works .intro {
+  margin-bottom: 3em;
 }
 
 .how-tiles .how-tile {
@@ -142,35 +169,154 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 15px auto;
+  margin: 0 auto 15px;
+  background: white;
 }
 .curriculum-details-tile img {
   width: 80px;
 }
+.curriculum-details-tile h4 {
+  margin-top: 10px;
+}
 
 /* success stories */
+.success-stories {
+  max-width: 1280px;
+}
 .success-stories h2 {
   padding-top: 50px;
 }
 .success-stories .read-more {
   padding-top: 30px;
+  color: rgba(74, 74, 74, 0.7);
+  text-decoration: underline;
+  text-align: center;
 }
 .success-stories .signup {
   padding: 5em 2.5em;
+  text-align: center;
 }
 .success-stories .signup p {
   margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+.success-stories .success-stories-container {
+  margin-top: 100px;
 }
 
 .success-story {
   display: flex;
   text-align: left;
+  padding-bottom: 36px;
+  max-width: 600px;
 }
-.success-story img {
-  width: 50px;
+.success-story .photo {
+  flex-basis: 100px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+.success-story .content {
+  flex: 1 1 0%;
 }
 .success-story .name {
   color: var(--odin-gold);
+}
+.success-story img {
+  width: 50px;
+  align-self: flex-start;
+  border-radius: 25px;
+}
+
+footer {
+  min-height: 70px;
+  font-size: 1em;
+}
+footer .links > * {
+  height: 90px;
+  font-weight: bold;
+  color: var(--odin-grey);
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .how-tiles img {
+    height: 120px;
+  }
+
+  footer {
+    min-height: 140px;
+  }
+}
+@media (min-width: 768px) {
+  .nav {
+    position: relative;
+    justify-content: center;
+  }
+
+  .nav-space {
+    display: none;
+  }
+
+  .how-tiles img {
+    height: 160px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  footer {
+    min-height: 277px;
+  }
+}
+@media (min-width: 1024px) {
+  .success-story {
+    max-width: none;
+    flex-basis: 49%;
+  }
+}
+@media (min-width: 580px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .curriculum-details-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .curriculum-details-tile {
+    margin: 0 30px 30px 0;
+    padding: 23px 46px 25px;
+    height: 256px;
+    max-width: 254px;
+  }
+  .curriculum-details-tile img {
+    width: 160px;
+  }
+
+  .curriculum-details-tile:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media (min-width: 990px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .curriculum-details-tile:nth-child(2n) {
+    margin: 0 30px 30px 0;
+  }
+
+  .curriculum-details-tile:nth-child(3n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
